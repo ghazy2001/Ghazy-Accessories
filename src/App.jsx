@@ -3,7 +3,7 @@ import AboutS from "./components/AboutS";
 import BestSellers from "./components/BestSellers";
 import GiftCard from "./components/GiftCard";
 import Home from "./components/Home";
-import NewCollection from "./components/NewCollection";
+
 import AllProducts from "./components/allProducts";
 import Footter from "./components/footter";
 import Header from "./components/header";
