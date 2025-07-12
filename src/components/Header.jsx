@@ -11,7 +11,7 @@ const navItems = [
   { label: "حول", path: "/about" },
   { label: "كروت الخصومات", path: "/gift-card" },
   { label: "تسجيل الدخول", icon: <PersonIcon />, path: "/login" },
-  { label: "", icon: <ShoppingCartIcon />, path: "/cart" },
+  { label: "العربة", icon: <ShoppingCartIcon />, path: "/cart" },
 ];
 
 function Header() {
@@ -64,10 +64,5 @@ function Header() {
     </AppBar>
   );
 }
-
-/**
- * Injected by the documentation to work in an iframe.
- * You won't need it on your project.
- */
 
 export default Header;

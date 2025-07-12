@@ -1,6 +1,6 @@
 import Card from "@mui/material/Card";
 import Typography from "@mui/material/Typography";
-import { CardMedia } from "@mui/material";
+import { CardMedia, Box } from "@mui/material";
 import CardContent from "@mui/material/CardContent";
 import NewCollection from "./NewCollection";
 import AboutS from "./AboutS";
@@ -28,17 +28,41 @@ function Home() {
           >
             غازى
           </Typography>
-          <Typography
-            variant="h3"
-            sx={{ color: "text.secondary", marginRight: "70px" }}
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              marginRight: "65px",
+            }}
           >
-            لجميع مستلزمات المطابخ الحديثة و الدريسنج رووم
-          </Typography>
+            <Typography variant="h3" sx={{ color: "text.secondary" }}>
+              لجميع مستلزمات المطابخ الحديثة و الدريسنج رووم
+            </Typography>
+
+            <Typography
+              component="a"
+              href="/allProducts"
+              sx={{
+                color: "text.secondary",
+                fontSize: 30,
+                fontWeight: "bold",
+                textDecoration: "underline",
+                cursor: "pointer",
+                width: "fit-content",
+                "&:after": {
+                  content: '" ↗"',
+                },
+              }}
+            >
+              تسوق الأن{" "}
+            </Typography>
+          </Box>
         </CardContent>
         <CardMedia
           component="img"
           height="100%"
-          image="/public/big.jpg"
+          image="/big.jpg"
           alt="main pic"
           style={{ marginTop: "30px" }}
         />

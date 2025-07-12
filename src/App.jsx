@@ -8,6 +8,7 @@ import AllProducts from "./components/allProducts";
 import Footter from "./components/Footter";
 import Header from "./components/Header";
 import { Route, Routes } from "react-router-dom";
+import Cart from "./components/cart";
 function App() {
   return (
     <>
@@ -24,7 +25,7 @@ function App() {
             <Route path="/best-sellers" element={<BestSellers />} />
             <Route path="/gift-card" element={<GiftCard />} />
             <Route path="/allProducts" element={<AllProducts />} />
-            <Route path="cart" />
+            <Route path="cart" element={<Cart />} />
           </Routes>
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
