@@ -31,7 +31,7 @@ const Footter = () => {
             sx={{
               fontWeight: "bold",
               fontFamily: "serif",
-              fontSize: 300,
+              fontSize: 200,
               lineHeight: 1,
             }}
           >
@@ -40,7 +40,7 @@ const Footter = () => {
         </Grid>
 
         <Grid item xs={12} md={9}>
-          <Box sx={{ maxWidth: 500, marginRight: 60, marginTop: 5 }}>
+          <Box sx={{ maxWidth: 500, marginRight: 30, marginTop: 5 }}>
             <Typography
               variant="subtitle1"
               sx={{ fontWeight: "medium", fontSize: 60 }}
@@ -111,20 +111,20 @@ const Footter = () => {
         </Grid>
       </Grid>
 
-      <Grid container spacing={30} sx={{ mt: 8 }}>
+      <Grid container spacing={20} sx={{ mt: 8 }}>
         <Grid item xs={6} sm={3} md={2}>
-          <Typography sx={{ mb: 2, fontSize: 30 }}>التواصل</Typography>
-          <Typography sx={{ fontSize: 20 }}>
+          <Typography sx={{ mb: 2, fontSize: 20 }}>التواصل</Typography>
+          <Typography sx={{ fontSize: 15 }}>
             mahmoudghazy2001@gmail.com
           </Typography>
           <Typography sx={{ fontSize: 20 }}>01003485691</Typography>
         </Grid>
         <Grid item xs={6} sm={3} md={2}>
-          <Typography sx={{ mb: 1, fontSize: 30 }}>العنوان</Typography>
-          <Typography sx={{ fontSize: 20 }}>
+          <Typography sx={{ mb: 1, fontSize: 20 }}>العنوان</Typography>
+          <Typography sx={{ fontSize: 15 }}>
             محافظة الغربية المحلة الكبرى
           </Typography>
-          <Typography sx={{ fontSize: 20 }}>ميدان الزراعة</Typography>
+          <Typography sx={{ fontSize: 12 }}>ميدان الزراعة</Typography>
         </Grid>
         <Grid item xs={6} sm={3} md={2}>
           <Typography sx={{ mb: 1 }}>القائمة</Typography>
@@ -164,34 +164,6 @@ const Footter = () => {
           <Typography>
             <Link href="#" underline="hover" sx={{ color: textColor }}>
               Pinterest
-            </Link>
-          </Typography>
-        </Grid>
-        <Grid item xs={6} sm={3} md={2}>
-          <Typography sx={{ mb: 1 }}>Policy</Typography>
-          <Typography>
-            <Link href="#" underline="hover" sx={{ color: textColor }}>
-              Terms & Conditions
-            </Link>
-          </Typography>
-          <Typography>
-            <Link href="#" underline="hover" sx={{ color: textColor }}>
-              Privacy Policy
-            </Link>
-          </Typography>
-          <Typography>
-            <Link href="#" underline="hover" sx={{ color: textColor }}>
-              Accessibility Statement
-            </Link>
-          </Typography>
-          <Typography>
-            <Link href="#" underline="hover" sx={{ color: textColor }}>
-              Refund Policy
-            </Link>
-          </Typography>
-          <Typography>
-            <Link href="#" underline="hover" sx={{ color: textColor }}>
-              Shipping Policy
             </Link>
           </Typography>
         </Grid>

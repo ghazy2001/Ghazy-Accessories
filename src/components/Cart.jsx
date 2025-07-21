@@ -102,8 +102,8 @@ function Cart() {
                     <Box
                       sx={{
                         display: "flex",
-                        gap: 8,
-                        marginRight: 430,
+                        gap: 6,
+                        marginRight: 280,
                         marginTop: 10,
                       }}
                     >
@@ -148,7 +148,7 @@ function Cart() {
                       sx={{
                         width: 200,
                         fontSize: 20,
-                        marginRight: 430,
+                        marginRight: 280,
                         backgroundColor: "#d32f2f",
                         "&:hover": {
                           backgroundColor: "#9a0007",
@@ -225,7 +225,7 @@ function Cart() {
               color: "whitesmoke",
               marginTop: 13,
               marginBottom: 12,
-              marginRight: 10,
+              marginRight: 2,
               background: "#d32f2f",
               padding: 5,
             }}
