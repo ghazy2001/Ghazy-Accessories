@@ -8,7 +8,7 @@ import AllProducts from "./components/allProducts";
 import Footter from "./components/Footter";
 import Header from "./components/Header";
 import { Route, Routes } from "react-router-dom";
-import Cart from "./components/cart";
+import Cart from "./components/Cart";
 function App() {
   return (
     <>
