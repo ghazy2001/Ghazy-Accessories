@@ -25,7 +25,7 @@ function GiftCard() {
           marginTop: 5,
           borderRadius: 5,
         }}
-        image="/public/8.jpg"
+        image="/8.jpg"
         alt="Gift card image"
       />
 

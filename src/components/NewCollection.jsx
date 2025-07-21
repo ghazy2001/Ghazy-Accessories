@@ -54,7 +54,7 @@ function NewCollection() {
         <Grid item xs={12} md={6} sx={{ gridColumn: "1/ 2", gridRow: "2 / 2" }}>
           <CardMedia
             component="img"
-            image="/secound.jpg"
+            image="/5.jpg"
             alt="second pic"
             sx={{
               height: "60vh",
@@ -69,7 +69,7 @@ function NewCollection() {
         <Grid item xs={12} md={6} sx={{ gridColumn: "2 / 2", gridRow: "1/ 3" }}>
           <CardMedia
             component="img"
-            image="/public/third.jpg"
+            image="/third.jpg"
             alt="third pic"
             sx={{
               height: "100%",
