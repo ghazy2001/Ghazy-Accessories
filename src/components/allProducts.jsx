@@ -1,15 +1,7 @@
-import React, { useState } from "react";
-import {
-  Grid,
-  Card,
-  CardMedia,
-  CardContent,
-  Typography,
-  CardActions,
-  Button,
-  Pagination,
-  Box,
-} from "@mui/material";
+"use client"
+
+import { useState } from "react"
+import { Grid, Card, CardMedia, CardContent, Typography, CardActions, Button, Pagination, Box } from "@mui/material"
 
 const products = [
   {
@@ -193,42 +185,36 @@ const products = [
     price: "$7.00",
     image: "/33.jpg",
   },
-];
+]
 
 function AllProducts() {
-  const [page, setPage] = useState(1);
-  const productsPerPage = 8;
-  const count = Math.ceil(products.length / productsPerPage);
+  const [page, setPage] = useState(1)
+  const productsPerPage = 8
+  const count = Math.ceil(products.length / productsPerPage)
 
   const handleChange = (event, value) => {
-    setPage(value);
-  };
+    setPage(value)
+  }
 
   const addToCart = (product) => {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    const existingProductIndex = cart.findIndex(
-      (item) => item.id === product.id
-    );
+    const cart = JSON.parse(localStorage.getItem("cart")) || []
+    const existingProductIndex = cart.findIndex((item) => item.id === product.id)
     if (existingProductIndex !== -1) {
-      cart[existingProductIndex].quantity += 1;
+      cart[existingProductIndex].quantity += 1
     } else {
-      cart.push({ ...product, quantity: 1 });
+      cart.push({ ...product, quantity: 1 })
     }
-    localStorage.setItem("cart", JSON.stringify(cart));
-    alert(`${product.title} تم إضافته إلى العربة`);
-  };
+    localStorage.setItem("cart", JSON.stringify(cart))
+    alert(`${product.title} تم إضافته إلى العربة`)
+  }
 
-  const displayedProducts = products.slice(
-    (page - 1) * productsPerPage,
-    page * productsPerPage
-  );
+  const displayedProducts = products.slice((page - 1) * productsPerPage, page * productsPerPage)
 
   return (
     <Box
       sx={{
         background: "linear-gradient(to top, white, rgb(42 46 50 / 88%))",
-
-        padding: "2rem",
+        padding: { xs: "1rem", sm: "1.5rem", md: "2rem" },
         direction: "rtl",
         fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
       }}
@@ -236,18 +222,22 @@ function AllProducts() {
       <Typography
         variant="h4"
         gutterBottom
-        sx={{ fontWeight: "700", mb: 4, color: "white" }}
+        sx={{
+          fontWeight: "700",
+          mb: 4,
+          color: "white",
+          fontSize: { xs: "1.5rem", sm: "2rem", md: "2.5rem" },
+          textAlign: { xs: "center", sm: "right" },
+        }}
       >
         جميع المنتجات
       </Typography>
-      <Grid container spacing={4}>
+      <Grid container spacing={{ xs: 1.5, sm: 2, md: 3 }}>
         {displayedProducts.map((product) => (
-          <Grid item key={product.id} xs={12} sm={6} md={4} lg={3}>
+          <Grid item key={product.id} xs={6} sm={6} md={4} lg={3}>
             <Card
               sx={{
-                background:
-                  "linear-gradient(to top, white, rgb(42 46 50 / 88%))",
-
+                background: "linear-gradient(to top, white, rgb(42 46 50 / 88%))",
                 color: "rgb(42 46 50 / 88%)",
                 height: "100%",
                 display: "flex",
@@ -256,23 +246,23 @@ function AllProducts() {
                 borderRadius: 2,
                 transition: "transform 0.3s ease",
                 "&:hover": {
-                  transform: "translateY(-8px)",
+                  transform: "translateY(-4px)",
                   boxShadow: "0 8px 16px rgba(0,0,0,0.2)",
                 },
               }}
             >
               <CardMedia
                 component="img"
-                height="400vh"
-                image={product.image}
-                alt={product.title}
                 sx={{
+                  height: { xs: "120px", sm: "180px", md: "220px" },
                   objectFit: "cover",
                   borderTopLeftRadius: 8,
                   borderTopRightRadius: 8,
                 }}
+                image={product.image}
+                alt={product.title}
               />
-              <CardContent sx={{ flexGrow: 1, px: 2, pt: 2 }}>
+              <CardContent sx={{ flexGrow: 1, p: { xs: 1, sm: 1.5, md: 2 } }}>
                 <Typography
                   gutterBottom
                   variant="subtitle1"
@@ -280,8 +270,13 @@ function AllProducts() {
                   sx={{
                     fontWeight: "700",
                     color: "rgb(42 46 50 / 88%)",
-                    minHeight: "3rem",
-                    fontSize: 25,
+                    minHeight: { xs: "2.5rem", sm: "3rem" },
+                    fontSize: { xs: "12px", sm: "14px", md: "16px" },
+                    lineHeight: 1.2,
+                    display: "-webkit-box",
+                    WebkitLineClamp: 2,
+                    WebkitBoxOrient: "vertical",
+                    overflow: "hidden",
                   }}
                 >
                   {product.title}
@@ -292,13 +287,13 @@ function AllProducts() {
                   sx={{
                     fontWeight: "700",
                     color: "#ff6f61",
-                    fontSize: "20px",
+                    fontSize: { xs: "14px", sm: "16px", md: "18px" },
                   }}
                 >
                   {product.price}
                 </Typography>
               </CardContent>
-              <CardActions sx={{ px: 2, pb: 2 }}>
+              <CardActions sx={{ p: { xs: 1, sm: 1.5, md: 2 }, pt: 0 }}>
                 <Button
                   onClick={() => addToCart(product)}
                   size="small"
@@ -313,7 +308,9 @@ function AllProducts() {
                     fontWeight: "700",
                     textTransform: "none",
                     borderRadius: 1,
-                    fontSize: "20px",
+                    fontSize: { xs: "11px", sm: "13px", md: "14px" },
+                    py: { xs: 0.5, sm: 0.75, md: 1 },
+                    minHeight: { xs: "32px", sm: "36px", md: "40px" },
                   }}
                 >
                   اضافة الى العربة
@@ -335,6 +332,7 @@ function AllProducts() {
           "& .MuiPaginationItem-root": {
             fontWeight: "700",
             color: "#2a2e32",
+            fontSize: { xs: "14px", md: "16px" },
           },
           "& .MuiPaginationItem-root.Mui-selected": {
             backgroundColor: "#ff6f61",
@@ -343,7 +341,7 @@ function AllProducts() {
         }}
       />
     </Box>
-  );
+  )
 }
 
-export default AllProducts;
+export default AllProducts

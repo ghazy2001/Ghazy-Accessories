@@ -1,14 +1,14 @@
-import "./App.css";
-import AboutS from "./components/AboutS";
-import BestSellers from "./components/BestSellers";
-import GiftCard from "./components/GiftCard";
-import Home from "./components/Home";
+import "./App.css"
+import AboutS from "./components/AboutS"
+import BestSellers from "./components/BestSellers"
+import GiftCard from "./components/GiftCard"
+import Home from "./components/Home"
 
-import AllProducts from "./components/allProducts";
-import Footter from "./components/Footter";
-import Header from "./components/Header";
-import { Route, Routes } from "react-router-dom";
-import Cart from "./components/Cart";
+import AllProducts from "./components/allProducts"
+import Footter from "./components/Footter"
+import Header from "./components/Header"
+import { Route, Routes } from "react-router-dom"
+import Cart from "./components/Cart"
 function App() {
   return (
     <>
@@ -33,7 +33,7 @@ function App() {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default App;
+export default App

@@ -1,11 +1,11 @@
-import Card from "@mui/material/Card";
-import Typography from "@mui/material/Typography";
-import { CardMedia, Box } from "@mui/material";
-import CardContent from "@mui/material/CardContent";
-import NewCollection from "./NewCollection";
-import AboutS from "./AboutS";
-import BestSellers from "./BestSellers";
-import GiftCard from "./GiftCard";
+import Card from "@mui/material/Card"
+import Typography from "@mui/material/Typography"
+import { CardMedia, Box } from "@mui/material"
+import CardContent from "@mui/material/CardContent"
+import NewCollection from "./NewCollection"
+import AboutS from "./AboutS"
+import BestSellers from "./BestSellers"
+import GiftCard from "./GiftCard"
 function Home() {
   return (
     <>
@@ -13,30 +13,41 @@ function Home() {
         sx={{
           color: "rgb(42 46 50 / 88%)",
           width: "100%",
-          height: "100%",
+          height: { xs: "auto", md: "100%" },
           direction: "rtl",
           marginBottom: 3,
           background: "linear-gradient(to bottom, white, rgb(42 46 50 / 88%))",
         }}
       >
-        <CardContent>
+        <CardContent sx={{ p: { xs: 2, sm: 3 } }}>
           <Typography
             gutterBottom
             variant="h1"
             component="div"
-            sx={{ marginRight: "60px" }}
+            sx={{
+              marginRight: { xs: "20px", sm: "40px", md: "60px" },
+              fontSize: { xs: "2.5rem", sm: "3.5rem", md: "4rem" },
+            }}
           >
             غازى
           </Typography>
           <Box
             sx={{
               display: "flex",
+              flexDirection: { xs: "column", sm: "row" },
               justifyContent: "space-between",
-              alignItems: "center",
-              marginRight: "65px",
+              alignItems: { xs: "flex-start", sm: "center" },
+              marginRight: { xs: "20px", sm: "40px", md: "65px" },
+              gap: { xs: 2, sm: 0 },
             }}
           >
-            <Typography variant="h3" sx={{ color: "text.secondary" }}>
+            <Typography
+              variant="h3"
+              sx={{
+                color: "text.secondary",
+                fontSize: { xs: "1.2rem", sm: "1.5rem", md: "1.75rem" },
+              }}
+            >
               لجميع مستلزمات المطابخ الحديثة و الدريسنج رووم
             </Typography>
 
@@ -45,7 +56,7 @@ function Home() {
               href="/allProducts"
               sx={{
                 color: "text.secondary",
-                fontSize: 30,
+                fontSize: { xs: "1rem", sm: "1.25rem", md: "1.5rem" },
                 fontWeight: "bold",
                 textDecoration: "underline",
                 cursor: "pointer",
@@ -61,10 +72,13 @@ function Home() {
         </CardContent>
         <CardMedia
           component="img"
-          height="100%"
+          sx={{
+            height: { xs: "300px", sm: "400px", md: "auto" },
+            objectFit: "cover",
+            marginTop: { xs: "15px", sm: "20px", md: "30px" },
+          }}
           image="/big.jpg"
           alt="main pic"
-          style={{ marginTop: "30px" }}
         />
       </Card>
       <NewCollection />
@@ -72,7 +86,7 @@ function Home() {
       <BestSellers />
       <GiftCard />
     </>
-  );
+  )
 }
 
-export default Home;
+export default Home
