@@ -6,7 +6,9 @@ import NewCollection from "./NewCollection"
 import AboutS from "./AboutS"
 import BestSellers from "./BestSellers"
 import GiftCard from "./GiftCard"
+import { useNavigate } from "react-router-dom"
 function Home() {
+  const navigate = useNavigate()
   return (
     <>
       <Card
@@ -52,8 +54,8 @@ function Home() {
             </Typography>
 
             <Typography
-              component="a"
-              href="/allProducts"
+              component="span"
+              onClick={() => navigate("/allProducts")}
               sx={{
                 color: "text.secondary",
                 fontSize: { xs: "1rem", sm: "1.25rem", md: "1.5rem" },
@@ -63,6 +65,9 @@ function Home() {
                 width: "fit-content",
                 "&:after": {
                   content: '" ↗"',
+                },
+                "&:hover": {
+                  color: "primary.main",
                 },
               }}
             >
